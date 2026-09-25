@@ -2,6 +2,7 @@ import { Capacitor } from "@capacitor/core";
 import type { ApiResponse } from "@otter-music/shared";
 
 export const IS_NATIVE = Capacitor.isNativePlatform();
+export const IS_WEB_PROD = import.meta.env.PROD && !IS_NATIVE;
 
 const getDefaultApiUrl = () => "https://otter-music.pages.dev";
 
